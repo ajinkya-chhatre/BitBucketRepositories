@@ -18,6 +18,7 @@
 		9D7D053626885B5D00ECD2B5 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7D053526885B5D00ECD2B5 /* Repository.swift */; };
 		9D7D053C26885B6A00ECD2B5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7D053B26885B6A00ECD2B5 /* Constants.swift */; };
 		9D7D054226885B7A00ECD2B5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7D054126885B7A00ECD2B5 /* ViewModel.swift */; };
+		9D7D054826885C9B00ECD2B5 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7D054726885C9B00ECD2B5 /* RepositoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9D7D053526885B5D00ECD2B5 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		9D7D053B26885B6A00ECD2B5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9D7D054126885B7A00ECD2B5 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9D7D054726885C9B00ECD2B5 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				9D7D047F26876E0B00ECD2B5 /* AppDelegate.swift */,
-				9D7D048326876E0B00ECD2B5 /* ViewController.swift */,
+				9D7D054626885C6000ECD2B5 /* View */,
 				9D7D054026885B7A00ECD2B5 /* ViewModel */,
 				9D7D053426885B5D00ECD2B5 /* Model */,
 				9D7D052E26885B5300ECD2B5 /* NetworkLayer */,
@@ -171,6 +173,16 @@
 			);
 			name = ViewModel;
 			path = Classes/ViewModel;
+			sourceTree = SOURCE_ROOT;
+		};
+		9D7D054626885C6000ECD2B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D7D048326876E0B00ECD2B5 /* ViewController.swift */,
+				9D7D054726885C9B00ECD2B5 /* RepositoryTableViewCell.swift */,
+			);
+			name = View;
+			path = Classes/View;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -305,6 +317,7 @@
 			files = (
 				9D7D053C26885B6A00ECD2B5 /* Constants.swift in Sources */,
 				9D7D053026885B5300ECD2B5 /* NetworkLayer.swift in Sources */,
+				9D7D054826885C9B00ECD2B5 /* RepositoryTableViewCell.swift in Sources */,
 				9D7D048426876E0B00ECD2B5 /* ViewController.swift in Sources */,
 				9D7D048026876E0B00ECD2B5 /* AppDelegate.swift in Sources */,
 				9D7D054226885B7A00ECD2B5 /* ViewModel.swift in Sources */,
