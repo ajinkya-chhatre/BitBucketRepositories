@@ -10,24 +10,34 @@ import XCTest
 
 class BitBucketReposTests: XCTestCase {
 
+    var viewModel: ViewModel?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.viewModel = ViewModel()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testParse() throws {
+        let exp = expectation(description: "Loading Repositories")
+        var repositories: [Repository]?
+        
+        // TODO: Mock this actual netwotk call using mocking framework like OHHTTPStubs
+        self.viewModel?.loadRepositories(urlStr: Constants.bitBucketRepoURL) { (reposArray) in
+            repositories = reposArray
+            exp.fulfill()
         }
+        
+        waitForExpectations(timeout: 5)
+        
+        guard let repos = repositories else {
+            XCTAssert(false)
+            return
+        }
+
+        XCTAssertEqual(repos.count, 10, "We should have loaded exactly 10 repositories.")
+    }
+    
+    override func tearDownWithError() throws {
+        self.viewModel = nil
     }
 
 }
